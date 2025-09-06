@@ -1,12 +1,16 @@
-import './App.css'
-import { Button } from './components/ui/button'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
-    <div className='bg-black p-0 m-0'>
-      <h1>HELLOOO</h1>
-      <Button variant={'destructive'} size={'lg'}>ADWAWDAD</Button>
-    </div >
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          {/* Tambahin lagi pagenya kalo udah */}
+        </Routes>
+      </Router>
+    </>
   )
 }
 
