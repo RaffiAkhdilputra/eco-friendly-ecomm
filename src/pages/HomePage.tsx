@@ -1,6 +1,11 @@
 import Navbar from "../components/navbar";
 import { ChevronRight } from "lucide-react";
 import { Button } from "../components/ui/button";
+// import EcoCard from "../components/product-card";
+import ProductList from "../components/product-list";
+import RecomendationList from "../components/recomendation-list";
+
+
 
 
 function HomePage() {
@@ -10,7 +15,7 @@ function HomePage() {
             <Navbar />
 
             {/* Main Content */}
-            <main className="flex min-h-screen flex-col items-center gap-20 px-24 py-10">
+            <main className="flex min-h-screen flex-col items-center px-[15%] gap-20 py-10">
 
                 {/* Banner: REVISI LUIS */}
                 <div className="flex flex-col items-center justify-center bg-gray-100 p-8 rounded-lg shadow-md">
@@ -31,11 +36,26 @@ function HomePage() {
                         </Button>
                     </div>
 
+                    {/* Barang Recomended */}
+                    <RecomendationList />
+
+                </div>
+
+                {/* Product Grid */}
+                <div className="flex w-full flex-col">
+                    <div className="flex items-center justify-between mb-4 w-full">
+                        <h2 className="text-md font-bold text-gray-800">
+                            Rekomendasi Untukmu
+                        </h2>
+                        <Button variant="link" className="text-sm font-medium hover:underline">
+                            Lihat Semua <ChevronRight className="ml-1 h-4 w-4" />
+                        </Button>
+                    </div>
+
+                    {/* ProductList from component */}
+                    <ProductList />
                 </div>
             </main>
-
-
-
         </>
     );
 }
