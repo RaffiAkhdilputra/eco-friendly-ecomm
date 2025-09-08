@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import ProductsPage from './pages/ProductsPage'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/products' element={<ProductsPage />} />
           {/* Tambahin lagi pagenya kalo udah */}
         </Routes>
       </Router>

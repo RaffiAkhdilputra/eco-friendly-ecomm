@@ -64,7 +64,6 @@ const products: EcoProduct[] = [
     },
 ]
 
-
 export default function ProductList() {
     return (
         <div className="w-full">
@@ -90,6 +89,11 @@ export default function ProductList() {
                 {products.map((product, i) => (
                     <ProductCard key={i} product={product} />
                 ))}
+            </div>
+
+            {/* Load More Button */}
+            <div className="flex justify-center mt-8">
+                <Button variant={"secondary"}>Muat Lebih Banyak</Button>
             </div>
 
         </div >
