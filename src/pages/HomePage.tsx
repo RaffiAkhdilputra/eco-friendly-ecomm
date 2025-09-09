@@ -1,8 +1,12 @@
+// Template
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+
+// Icons and UI components
+import { Link } from "react-router-dom";
+
 import { ChevronRight } from "lucide-react";
 import { Button } from "../components/ui/button";
-// import EcoCard from "../components/product-card";
 import ProductList from "../components/product-list";
 import RecomendationList from "../components/recomendation-list";
 
@@ -49,7 +53,9 @@ function HomePage() {
                             Rekomendasi Untukmu
                         </h2>
                         <Button variant="link" className="text-sm font-medium hover:underline">
-                            Lihat Semua <ChevronRight className="ml-1 h-4 w-4" />
+                            <Link to="/products" className="flex flex-row items-center">
+                                Lihat Semua <ChevronRight className="ml-1 h-4 w-4" />
+                            </Link>
                         </Button>
                     </div>
 
